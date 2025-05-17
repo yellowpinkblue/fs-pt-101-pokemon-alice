@@ -9,6 +9,10 @@ import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
 import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
+import { PokeDetails } from "./pages/PokeDetails";
+import { LocationDetails } from "./pages/LocationDetails";
+import { PokeTypeDetails } from "./pages/PokeTypeDetails";
+import { LocationList } from "./pages/LocationList";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,6 +27,10 @@ export const router = createBrowserRouter(
 
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
         <Route path= "/" element={<Home />} />
+        <Route path="pokemons/:id" element={<PokeDetails />} />
+        <Route path="locations/:id" element={< LocationDetails />} />
+        <Route path="/locations" element={ <LocationList /> } />
+        <Route path="types/:id" element={ <PokeTypeDetails /> } />
         <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
         <Route path="/demo" element={<Demo />} />
       </Route>

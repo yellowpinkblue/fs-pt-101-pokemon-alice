@@ -1,0 +1,19 @@
+.card-pokemon {
+    width: 18rem;
+    flex-shrink: 0;
+}
+
+.card-img-top-poke{
+    height: 8rem;
+    object-fit: contain;
+}
+
+.scroll-section {
+  display: flex;
+  flex-wrap: nowrap;        
+  overflow-x: auto;        
+  padding: 1rem 0;    
+  width: 100vw;
+  margin-left: calc (50% - 50vw);
+  box-sizing: content-box;
+}
